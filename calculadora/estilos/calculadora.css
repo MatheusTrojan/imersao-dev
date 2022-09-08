@@ -3,21 +3,55 @@
     justify-content: center;
     text-align: center;
     margin: 2em 0;
-}
-
-.notas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 1em;
-    width: 30vw;
-}
-
-.notas__bim {
-    padding: 0.5em;
-    margin: 0.3em
+    gap: 3em;
 }
 
 .calculadora__imagem {
     height: 40vh;
+    align-self: center;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1em;
+    width: 25vw;
+}
+
+.informacoes__input {
+    align-self: center;
+    border-radius: 0.5em;
+    margin: 0.3em;
+    padding: 0.5em;
+    width: 20vw;
+}
+  
+.informacoes label {
+    align-self: center;
+    color: white;
+    margin-top: 1em;
+    width: 40vw;
+}
+
+.informacoes__botao {
+    align-self: center;
+    background: #ffffff;
+    border-radius: 0.8em;
+    padding: 0.2em 0.4em;
+    width: 15vw;
+    transition: 0.3s ease-in-out;
+}
+
+.informacoes__botao:hover {
+    background: orange;
+}
+
+.resultado__conversao {
+    align-self: center;
+    color: #cac7c7;
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+    width: 40vw;
+    font-weight: bold;
 }

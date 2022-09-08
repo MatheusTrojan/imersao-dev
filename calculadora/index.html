@@ -19,31 +19,58 @@
 
         <div class="calculadora">
             <img src="images/calcular.png" alt="Calculadora ícones criados por Freepik - Flaticon" class="calculadora__imagem">
-            <div class="notas">
-                <input class="notas__bim" placeholder="Digite a nota do Primeiro Bimestre">
-                <input class="notas__bim" placeholder="Digite a nota do Segundo Bimestre">
-                <input class="notas__bim" placeholder="Digite a nota do Terceiro Bimestre">
-                <input class="notas__bim" placeholder="Digite a nota do Quarto Bimestre">
+            <div class="informacoes">
+                <input class="informacoes__input" type="number" id="nota1" size="2" placeholder="Primeiro Bimestre">
+                <input class="informacoes__input" type="number" id="nota2" placeholder="Segundo Bimestre">
+                <input class="informacoes__input" type="number" id="nota3" placeholder="Terceiro Bimestre">
+                <input class="informacoes__input" type="number" id="nota4" placeholder="Quarto Bimestre"><br>
+                <button type="submit" onclick="CalculaMedia()" class="informacoes__botao">Calcular Média</button>
+                <h2 id="valorMedia" class="resultado__conversao"></h2>
             </div>
         </div>
 
         <h2 class="page-title">Convertendo temperaturas!</h2>
-        <p class="page-subtitle">Informe a temperatura em Celsius para saber ela em Farenheit!</p>
-
-
+        <p class="page-subtitle">Informe a temperatura em Celsius para convertê-la!</p>
         <div class="calculadora">
-            <img src="images/calcular.png" alt="Calculadora ícones criados por Freepik - Flaticon" class="calculadora__imagem">
-            <div class="notas">
-                <input class="notas__bim" placeholder="Digite a temperatura em Celsius">
+            <img src="images/temperatura.png" alt="Temperatura - ícones criados por Freepik - Flaticon" class="calculadora__imagem">
+            <div class="informacoes">
+                <label for="moeda">Converta para Farenheit</label><br>
+                <input type="number" id="valor__celsius" size="2" placeholder="Digite a temperatura" class="informacoes__input"/><br>
+                <button type="submit" onclick="ConverterF()" class="informacoes__botao">Converter</button>
+                <h2 id="valorConvertido__faren" class="resultado__conversao"></h2>
+
+                <label for="moeda">Converta para Kelvin</label><br>
+                <input type="number" id="valor__celsius2" size="2" placeholder="Digite a temperatura" class="informacoes__input"/><br>
+                <button type="submit" onclick="ConverterK()" class="informacoes__botao">Converter</button>
+                <h2 id="valorConvertido__kelvin" class="resultado__conversao"></h2>
             </div>
         </div>
-    </div>
+
+        <h2 class="page-title">Convertendo moedas!</h2>
+        <p class="page-subtitle">Informe o valor em Real para ser convertido em Dólar e Euro!!</p>
+        <div class="calculadora">
+            <img src="images/moeda.png" alt="Temperatura - ícones criados por Freepik - Flaticon" class="calculadora__imagem">
+            <div class="informacoes">
+                <label for="moeda">Coverta para Dólar</label><br>
+                <input type="number" id="valor__real" size="2" placeholder="Digite o valor" class="informacoes__input"/><br>
+                <button type="submit" onclick="ConverterDolar()" class="informacoes__botao">Converter</button>
+                <h2 id="valorConvertido__dolar" class="resultado__conversao"></h2>
+
+                <label for="moeda">Converta para Euro</label><br>
+                <input type="number" id="valor__real2" size="2" placeholder="Digite o valor" class="informacoes__input"/><br>
+                <button type="submit" onclick="ConverterEuro()" class="informacoes__botao">Converter</button>
+                <h2 id="valorConvertido__euro" class="resultado__conversao"></h2>
+            </div>
+        </div>
+
+    </div>    
+
     <a href="https://alura.com.br/" target="_blank">
         <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
     </a>
 
-
-
-    <script src="main.js"></script>
+    <script src="js/media.js"></script>
+    <script src="js/temperatura.js"></script>
+    <script src="js/moedas.js"></script>
   </body>
 </html>
