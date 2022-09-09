@@ -1,9 +1,25 @@
-var listaFilmes = ["https://play-lh.googleusercontent.com/em2griqrHoxmxEss_WM5Fi2iqSEKrEfLNAltjX54lREOR0nz0du__KuSi2bA_YNjS4w", "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/d20b35b9c0734c429b652bd0280158a8c7c0dfa1a4c2254d0312eacf4c902c32._RI_V_TTW_.jpg", "https://kbimages1-a.akamaihd.net/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/1200/1200/False/star-wars-episode-iv-a-new-hope-3.jpg"]
+function adicionarFilme() {
+    // variavel para pegar o value do input com id "filme"
+    var filmeFavorito = document.getElementById("filme").value;
+    var tituloFilme = document.getElementById("titulo__filme").value;
+    // verificação de se o link inserido termina com .jpg
+    if (filmeFavorito.endsWith(".jpg")) {
+        listarFilmesNaTela(filmeFavorito, tituloFilme);
+    } else {
+        console.error("Endereço de filme inválido")
+    }
+    // apos salvar o filme, esse comando limpa o input 
+    document.getElementById("filme").value = "";
+    document.getElementById("titulo__filme").value = "";
+}
+        // dentro do parenteses, pode ser qualquer nome, desde que tudo o que estiver sendo executado dentro da função com ele, referencie à variável que estamos recebendo
+function listarFilmesNaTela (imagem, titulo) {
+    // variavel para pegar o que estiver escrito no input e colocar na biblioteca
+    var elementoFilmeFavorito = "<section class = 'filmes'><img src=" + imagem + ">" + "<h2 class = 'page-subtitle'>" + titulo + "</h2></section>";
 
-// push adiciona items na lista
-listaFilmes.push("https://images-na.ssl-images-amazon.com/images/S/pv-target-images/cf612039123df81f21a44121b8a229f1f9088947b7a4bebeae4ee2467fa82ad1._RI_V_TTW_.jpg");
+    // variavel para guardar a div com id listaFilmes
+    var elementoListaFilmes = document.getElementById("listaFilmes");
 
-for (var i = 0; i < listaFilmes.length; i++) {
-    document.write("<img src=" + listaFilmes[i] + ">");
-};
-
+    // jogando o filme desejado dentro da div lista filme, já como img e sem sobrescrever o filme colocado anteriormente
+    elementoListaFilmes.innerHTML = elementoListaFilmes.innerHTML + elementoFilmeFavorito; 
+}
