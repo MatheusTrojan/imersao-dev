@@ -11,26 +11,26 @@ function Chutar() {
     var chute = parseInt(document.getElementById("valor").value);
 
     if (chute == numeroSecreto) {
-        elementoResultado.innerHTML = "PARABÉNS, VOCÊ ACERTOU!";
+        elementoResultado.innerHTML = "Muito bem jovem Padawan, correto você está!";
         elementoDica.innerHTML = "";
         document.getElementById("btnChutar").disabled = true;
 
     } else if (numeroDeChutes >= tentativasPermitidas) {
         elementoResultado.innerHTML =
-          "Suas chances acabaram, clique em recomeçar para resetar o jogo";
+          "Parece que suas chances acabaram. Tente outra vez apertando em recomeçar!";
         document.getElementById("btnChutar").disabled = true;
         elementoDica.innerHTML = "O número secreto era " + numeroSecreto;
 
     } else if (chute > 10 || chute < 0) {
-        elementoResultado.innerHTML = "Você deve digitar um número de 0 a 10";
+        elementoResultado.innerHTML = "Apenas entre 0 e 10, o número deve ser";
 
     } else {
-        elementoResultado.innerHTML ="Não foi dessa vez, tentativa " + numeroDeChutes +" de " + tentativasPermitidas;
+        elementoResultado.innerHTML ="Parece que não foi esse o número! Tentativa " + numeroDeChutes +" de " + tentativasPermitidas;
 
         if (numeroSecreto > chute) {
-          elementoDica.innerHTML = "ERRRRROOOU. O número secreto é MAIOR que " + chute;
+          elementoDica.innerHTML = "Errado você está. MAIOR que " + chute + " o número é.";
         } else {
-          elementoDica.innerHTML = "ERRRRROOOU. O número secreto é MENOR que " + chute;
+          elementoDica.innerHTML = "Errado você está. MENOR que " + chute + " o número é.";
         }
         numeroDeChutes++;
     }
@@ -41,7 +41,7 @@ function Reset() {
     document.getElementById("btnChutar").disabled = false;
     numeroDeChutes = 1;
     document.getElementById("valor").value = "";
-    elementoResultado.innerHTML = "";
+    elementoResultado.innerHTML = "Jogo Reiniciado!";
     elementoDica.innerHTML = "";
 }
   
