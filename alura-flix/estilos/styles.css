@@ -6,39 +6,39 @@ body {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-  }
-  
-  .container {
+}
+    
+.container {
     text-align: center;
     padding: 20px;
-  }
+}
   
-  .page-title {
+.page-title {
     color: #ffffff;
     margin: 0 0 5px;
-  }
+}
   
-  .page-subtitle {
+.page-subtitle {
     color: #ffffff;
     margin-top: 5px;
-  }
+}
   
-  .page-logo {
+.page-logo {
     width: 200px;
-  }
+}
   
-  .alura-logo {
+.alura-logo {
     width: 40px;
     position: absolute;
     top: 10px;
     right: 10px;
-  }
+}
   
-  body > img {
-    margin: 0 10px;
-  }
+body > img {
+  margin: 0 10px;
+}
   
-  img {
-    max-height: 250px;
-  }
+img {
+  max-height: 250px;
+}
   

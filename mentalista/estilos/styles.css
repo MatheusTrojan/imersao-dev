@@ -55,17 +55,25 @@ input {
 }
 
 .resultado {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
   color: darkorange;
+  display: inline-block;
   font-size: 20px;
   font-weight: bold;
   margin-top: 16px;
+  padding: 0.3em 0.5em;
   text-align: center;
 }
 
 .dica {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
   color: #ffffff;
-  text-align: center;
+  display: inline-block;
+  padding: 0.3em 0.5em;
   margin-top: 16px;
+  text-align: center;
 }
 
 @media (max-height: 500px) {
