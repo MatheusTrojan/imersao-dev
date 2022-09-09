@@ -1,3 +1,7 @@
+var filmesTitulos = [];
+var filmesPoster = [];
+
+
 function adicionarFilme() {
     // variavel para pegar o value do input com id "filme"
     var tituloFilme = document.getElementById("titulo__filme").value;
@@ -5,6 +9,8 @@ function adicionarFilme() {
 
     // verificação de se o link inserido termina com .jpg .png ou .jpeg
         if (posterFilme.endsWith(".jpg") || posterFilme.endsWith(".png") || posterFilme.endsWith(".jpeg")) {
+            filmesTitulos.push(tituloFilme);
+            filmesPoster.push(posterFilme);
             listarFilmesNaTela(posterFilme, tituloFilme);
             alert("Filme adicionado com sucesso!")
         } else {
@@ -14,6 +20,8 @@ function adicionarFilme() {
     // apos salvar o filme, esse comando limpa o input
     document.getElementById("titulo__filme").value = ""; 
     document.getElementById("poster__filme").value = "";
+    console.log (filmesTitulos);
+    console.log (filmesPoster);
 
 }
         // dentro do parenteses, pode ser qualquer nome, desde que tudo o que estiver sendo executado dentro da função com ele, referencie à variável que estamos recebendo
