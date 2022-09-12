@@ -54,4 +54,20 @@
     border: solid 1px white;
     color: white;
   }
-  
+
+  .novo__usuario {
+    color: #ffffff;
+    display: flex;
+    gap: 0.3em;
+    margin: 2em 0 2em 1em;
+  }
+
+  .limpar__dados {
+    position: absolute;
+    left: 90%;
+  }
+
+  .alerta {
+    color: #ffffff;
+    margin: 2em;
+  }
