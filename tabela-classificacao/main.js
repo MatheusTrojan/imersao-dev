@@ -70,7 +70,7 @@ function adicionarJogador () {
         derrotas: 0, 
         pontos: 0
     };
-    
+
     if (novoJogador.nome != "") {
         jogadores.push(novoJogador);
         alert("Jogador adicionado com sucesso!");
@@ -86,7 +86,7 @@ function adicionarJogador () {
 function verificaVitorias () {
     if (totDerrotas != totVitorias) {
         var verificacao = document.getElementById("verificaVitorias");
-        verificacao.innerHTML = "Número de total vitórias deve ser igual ao número total de derrotas!";
+        verificacao.innerHTML = "Número total de vitórias deve ser igual ao número total de derrotas!";
     }
     if (totDerrotas == totVitorias) {
         var verificacao = document.getElementById("verificaVitorias");
@@ -101,6 +101,8 @@ function limparDados(i) {
         jogadores[i].empates = 0;
         jogadores[i].derrotas = 0;
         jogadores[i].pontos = 0;
+        totDerrotas = 0;
+        totVitorias = 0;
         exibirJogadores(jogadores);
     }
 }
