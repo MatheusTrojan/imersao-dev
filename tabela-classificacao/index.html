@@ -21,7 +21,7 @@
                 <th>Empates</th>
                 <th>Derrotas</th>
                 <th>Pontos</th>
-                <th colspan="4">Ações</th>
+                <th colspan="3">Ações</th>
             </tr>
         </thead>
         
@@ -31,12 +31,15 @@
 
     <h2 class="alerta" id="verificaVitorias"></h2>
 
-    <div class="novo__usuario">  
-        <label for="novo__jogador">Adicione mais players!</label>      
-        <input type="text" id="novo__jogador" placeholder="Insira o nome do novo jogador">
-        <button onClick="adicionarJogador()">Adicionar</button>
-        <button onClick="limparDados()" class="limpar__dados">Limpar</button>
-    </div>
+    <section class="secao__novo__usuario">
+        <div class="novo__usuario">  
+            <label for="novo__jogador">Adicione mais players!</label>      
+            <input type="text" id="novo__jogador" placeholder="Nome do novo jogador" class="novo__usuario--input">
+            <button onClick="adicionarJogador()" class="botao__secundario">Adicionar</button>
+        </div>
+        <button onClick="limparDados()" class="botao__secundario">Limpar</button>
+    </section>
+
 
     <script src="main.js"></script>
 </body>
