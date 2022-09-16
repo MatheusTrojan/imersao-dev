@@ -8,7 +8,7 @@
 
 .calculadora__imagem {
     height: 30vh;
-    align-self: center;
+    align-self: flex-start;
 }
 
 .informacoes {
